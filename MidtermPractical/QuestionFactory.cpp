@@ -12,12 +12,12 @@ void QuestionFactory::GiveQuestion() {
 
 void QuestionFactory::ShowQuestion(Question currQuestion) {
 
-	std::cout << currQuestion.mQuestion << std::endl;
+	std::cout << currQuestion.mQuestion << "\n\n";
 
 	std::random_shuffle(std::begin(currQuestion.mAnswers), std::end(currQuestion.mAnswers));
 	for (int i = 0; i < 4; i++)
 	{
-		if (currQuestion.mAnswers[0][i] == '*') {
+		if (currQuestion.mAnswers[i][0] == '*') {
 			for (int j = 0; j < std::strlen(currQuestion.mAnswers[i]); j++)
 			{
 				if (j == 0) {

@@ -10,7 +10,7 @@ int main()
 	QuestionFactory qFactory;
 	std::string quitStr = "quit";
 	std::cout << "\n\n\n\n\n\n\n\t\t\tWelcome to the test of randomness... I will continue to ask you questions until" <<
-		"\n\t\t\t\t you tell me when to quit (type quit)\n\n";
+		"\n\t\t\t\t you tell me when to quit (enter 0)\n\n";
 	system("pause");
 
 
@@ -18,11 +18,8 @@ int main()
 	while (true)
 	{
 		qFactory.GiveQuestion();
+
 		system("pause");
-
-
-
-
 
 
 	}
