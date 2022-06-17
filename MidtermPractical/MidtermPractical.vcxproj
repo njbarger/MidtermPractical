@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MidtermPractical.cpp" />
+    <ClCompile Include="QuestionController.cpp" />
     <ClCompile Include="QuestionFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="QuestionController.h" />
     <ClInclude Include="Questions.h" />
     <ClInclude Include="QuestionFactory.h" />
   </ItemGroup>
