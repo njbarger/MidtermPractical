@@ -1,15 +1,17 @@
 #pragma once
 #include <string>
-#include <vector>
+#include <array>
 #include "Questions.h"
 
 class QuestionFactory
 {
 public:
-	bool askedTable[2];
-	void GiveQuestion();
+	int numberOfQuestions = 5;
+	bool askedTable[5] = { true,true,true,true,true };		// truth table for how many questions are asked
+	
+	bool GiveQuestion();
 	void ShowQuestion(Question currQuestion);
-
+	void ShowCorrectQuestion(Question currQuestion, bool answeredCorrect = true);
 
 };
 

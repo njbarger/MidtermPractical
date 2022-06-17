@@ -7,8 +7,8 @@
 
 int main()
 {
-	QuestionFactory qFactory;
-	std::string quitStr = "quit";
+	QuestionFactory qFactory;		// Factory for generating questions
+	bool dontQuit = true;			// complete exit condition
 	std::cout << "\n\n\n\n\n\n\n\t\t\tWelcome to the test of randomness... I will continue to ask you questions until" <<
 		"\n\t\t\t\t you tell me when to quit (enter 0)\n\n";
 	system("pause");
@@ -17,11 +17,18 @@ int main()
 
 	while (true)
 	{
-		qFactory.GiveQuestion();
-
+		dontQuit = qFactory.GiveQuestion();
+		if (!dontQuit)
+		{
+			break;
+		}
+		std::cout << "what is your answer? ";
+		std::string response;
+		std::cin >> response;
 		system("pause");
-
-
+		
 	}
+	std::cout << "\n\n\tIt seems I've run out of questions for you. Have a nice day!" << std::endl;
+	system("pause");
 	
 }
