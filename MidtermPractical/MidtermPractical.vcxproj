@@ -140,6 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MidtermPractical.cpp" />
+    <ClCompile Include="QuestionFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Questions.h" />
+    <ClInclude Include="QuestionFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
