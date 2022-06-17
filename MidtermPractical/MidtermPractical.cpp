@@ -10,14 +10,16 @@ int main()
 	QuestionController qController; // Controller for submitting answers
 	bool dontQuit = true;			// complete exit condition
 
-	int response;
+	int response;					// response variable for answer
 
 	std::cout << "\n\n\n\n\n\n\n\t\tWelcome to the test of randomness... \n\t\tI will continue to ask you questions until I run out of questions.\n\n";
 	system("pause");
 	
 	while (true)
 	{
+		// get the index of the question/answers
 		int currQuestionNDX = qFactory.GiveQuestion();
+		// check to see if question was given (-1 means list is empty)
 		if (currQuestionNDX == -1) {
 			break;
 		}
@@ -26,6 +28,7 @@ int main()
 			qController.ShuffleAnswers(currQuestion.mAnswers);
 			qFactory.ShowQuestion(currQuestion);
 			response = qController.GetAnswer();
+
 			if (qController.CheckAnswer(currQuestion, response)) {
 				qController.ShowCorrect();
 			}

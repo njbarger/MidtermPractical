@@ -6,8 +6,10 @@
 class QuestionFactory
 {
 public:
+	// numberOfQuestions and askedTable.size must be changed together, if at all;
 	int numberOfQuestions = 5;
-	bool askedTable[5] = { true, true, true, true, true };		// truth table for how many questions are asked
+	// truth table for how many questions are asked
+	bool askedTable[5] = { true, true, true, true, true };		
 	
 	int GiveQuestion();
 	void ShowQuestion(Question currQuestion);

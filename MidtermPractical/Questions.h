@@ -9,6 +9,18 @@ struct Question {
 	std::string mAnswers[4]; // right answer has * attatched to beginning
 };
 
+//*************************IMPORTANT************************************
+// 
+//	IF YOU WANT TO ADD A QUESTION TO THE LIST, DO NOT FORGET TO CHANGE
+//	NUMBER OF QUESTIONS / SIZE OF TRUTH TABLE (located in QuestionFactory.h)
+// 
+//  ALL QUESTIONS FOLLOW THE SAME FORMAT
+//	* 1 QUESTIONS
+//	* 3 WRONG ANSWERS
+//	* 1 CORRECT ANSWER (beginning with *)
+// 
+//**********************************************************************
+
 const struct Question Questions[] = {
 	{"What is the meaning of life?", {"Love", "Happiness", "Peace", "*42" }},
 	{"How many humans have been on the moon?", {"12", "5", "None, the moon landing was fake.", "*24"}},

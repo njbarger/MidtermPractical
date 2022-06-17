@@ -7,6 +7,7 @@ int QuestionController::GetAnswer()
 	int response;
 	std::cout << "\n\nWhat is your answer? " << std::endl;
 	while (true) {
+		// ensure answer is 1-4
 		if (std::cin >> response && response > 0 && response < 5) {
 			break;
 		}
