@@ -31,30 +31,31 @@ int main()
 
 
 
-		else {
-			// Get the question at valid index
-			Question currQuestion = Questions[currQuestionNDX];
 
-			// Shuffle the answers
-			qController.ShuffleAnswers(currQuestion.mAnswers);
+		// Get the question at valid index
+		Question currQuestion = Questions[currQuestionNDX];
 
-			// Print the question and answer
-			qFactory.ShowQuestion(currQuestion);
+		// Shuffle the answers
+		qController.ShuffleAnswers(currQuestion.mAnswers);
 
-			// Get the answer
-			response = qController.GetAnswer("What is your answer?");
+		// Print the question and answer
+		qFactory.ShowQuestion(currQuestion);
 
-			// Check if answer is correct
-			if (qController.CheckAnswer(currQuestion, response)) {
-				// Correct
-				qController.ShowCorrect();
-			}
-			else {
-				// Incorrect
-				qController.ShowIncorrect();
-			}
+		// Get the answer
+		response = qController.GetAnswer("What is your answer?");
+
+		// Check if answer is correct
+		if (qController.CheckAnswer(currQuestion, response)) {
+			// Correct
+			qController.ShowCorrect();
 		}
+		else {
+			// Incorrect
+			qController.ShowIncorrect();
+		}
+
 		system("pause");
+
 	}
 	std::cout << "\n\n\tIt seems I've run out of questions for you. Have a nice day!" << std::endl;
 	system("pause");

@@ -66,9 +66,7 @@ bool QuestionFactory::CheckForEncode(std::string answerToCheck)
 	if (answerToCheck[0] == '*') {
 		return true;
 	}
-	else {
-		return false;
-	}
+	return false;
 }
 
 // Decodes answer strings beginning with '*'.
@@ -83,7 +81,6 @@ bool QuestionFactory::CheckAskTableAtIndex(int tableIndex)
 	if (askTable[tableIndex]) {
 		return true;
 	}
-
 	return false;
 }
 

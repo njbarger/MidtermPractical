@@ -13,11 +13,9 @@ int QuestionController::GetAnswer(std::string prompt)
 		if (std::cin >> response && response > 0 && response <= numberOfAnswersPerQuestion) {
 			break;
 		}
-		else {
-			std::cout << "Please enter a valid entry... " << std::endl;
-			std::cin.clear();
-			std::cin.ignore(INT_MAX, '\n');
-		}
+		std::cout << "Please enter a valid entry... " << std::endl;
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
 	}
 	return response;
 
@@ -35,9 +33,7 @@ bool QuestionController::CheckAnswer(Question currQuestion, int answer)
 	if (currQuestion.mAnswers[answer-1][0] == '*') {
 		return true;
 	}
-	else {
-		return false;
-	}
+	return false;
 }
 
 // Correct answer message
