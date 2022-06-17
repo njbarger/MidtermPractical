@@ -19,12 +19,15 @@ struct Question {
 //	* 3 WRONG ANSWERS
 //	* 1 CORRECT ANSWER (beginning with *)
 // 
+//
+// If more answers per question need to be added/removed, QuestionController's numberOfAnswersPerQuestion must be modified for shuffling purposes
+// 
 //**********************************************************************
 
 const struct Question Questions[] = {
 	{"What is the meaning of life?", {"Love", "Happiness", "Peace", "*42" }},
 	{"How many humans have been on the moon?", {"12", "5", "None, the moon landing was fake.", "*24"}},
-	{"Where did my dad go?", {"That makes me uncomfortable...", "Texas, probably.", "He was run over by a train.", "**I* am your father"}},
+	{"Where did my dad go?", {"Is Darth Vader", "Was never told.", "Killed by Darth Vader", "*Texas, probably."} },
 	{"Who shot first?", {"*Han", "*Han", "*Han", "*Han" }},
 	{"Where are they taking the hobbits?", {"Who?","New Jersey", "Raccoon City", "*Isengard"}}
 };
