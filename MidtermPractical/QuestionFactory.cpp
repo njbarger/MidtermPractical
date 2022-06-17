@@ -11,7 +11,7 @@ bool QuestionFactory::GiveQuestion() {
 		randQuestion = rand() % numberOfQuestions;
 
 		// check to make sure that askedTable isnt empty while keeping randomness
-		for (size_t i = 0; i <= (unsigned int)numberOfQuestions; i++)
+		for (size_t i = 0; i < (unsigned int)numberOfQuestions; i++)
 		{
 			if (askedTable[i]) {	
 				break;		// making sure theres still options left, will break loop on any trues remaining
@@ -23,8 +23,7 @@ bool QuestionFactory::GiveQuestion() {
 
 	}
 	if (askedTable[randQuestion]) {
-		Question currQuestion = Questions[randQuestion];
-		ShowQuestion(currQuestion);
+		ShowQuestion(Questions[randQuestion]);
 		askedTable[randQuestion] = false;
 	}
 	
